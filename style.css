@@ -1,41 +1,122 @@
-html, body {
-  height: 100%;
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.container {
+html, body {
   height: 100%;
+  background-color: #000;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'AG', -apple-system, BlinkMacSystemFont, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p, span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+h1, h3 {
+  font-size: 22px;
+  line-height: 28px;
+  margin-top: 50px;
+}
+
+h2 {
+  font-size: 44px;
+  line-height: 50px;
+  margin-top: 50px;
+}
+
+.site {
+  width: 850px;
+  height: 100%;
+  margin: auto;
   align-content: center;
 }
 
-.image_outer_container {
-  margin-top: auto;
-  margin-bottom: auto;
-  border-radius: 50%;
+.content {
+  margin: auto 25px;
   position: relative;
 }
 
-.image_inner_container {
-  border-radius: 50%;
-  padding: 5px;
-  background: #833ab4;
-  background: -webkit-linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);
-  background: linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);
+.experience {
+  display: block;
+  width: 320px;
 }
 
-.image_inner_container img {
+.experience h3 {
+  margin-bottom: 15px;
+}
+
+.experience ul {
+  display: block;
+  width: 100%;
+}
+
+.experience li {
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.experience .time {
+  float: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.image-container {
+  padding: 5px;
+}
+
+.image-container img {
   height: 200px;
   width: 200px;
-  border-radius: 50%;
-  border: 5px solid white;
 }
 
-.image_outer_container .green_icon {
-  background-color: #4cd137;
-  position: absolute;
-  right: 30px;
-  bottom: 10px;
-  height: 30px;
-  width: 30px;
-  border: 5px solid white;
-  border-radius: 50%;
+.ending {
+  margin-top: 50px;
+}
+
+.ending a {
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 18px;
+}
+
+@media only screen and (max-width: 850px) {
+  .site {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .experience {
+    width: 100%;
+  }
+
+  .ending a {
+    margin-right: 60px;
+  }
+
+  .github {
+    margin-right: 0px !important;
+  }
 }
