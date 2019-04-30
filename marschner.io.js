@@ -7,8 +7,6 @@ if (time >= 6 && time <= 19) {
   id = "light";
 }
 
-id = "light";
-
 if (!$.getElementById(id)) {
   var head = $.getElementsByTagName('head')[0];
   var link = $.createElement('link');
