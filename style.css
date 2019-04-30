@@ -44,14 +44,25 @@ h2 {
 
 .site {
   width: 850px;
-  height: 100%;
   margin: auto;
   align-content: center;
 }
 
 .content {
+  padding-bottom: 50px;
   margin: auto 25px;
   position: relative;
+}
+
+.me {
+  width: 600px;
+  height: 200px;
+  margin-top: 25px;
+  border: 3px solid white;
+  background-image: url("me.jpg");
+  background-position: 0px -165px;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .experience {
@@ -63,19 +74,12 @@ h2 {
   margin-bottom: 15px;
 }
 
-.experience ul {
-  display: block;
-  width: 100%;
-}
-
 .experience li {
-  display: block;
-  width: 100%;
   margin-bottom: 25px;
 }
 
 .experience .time {
-  float: right;
+  float: right !important;
 }
 
 .center {
@@ -92,17 +96,34 @@ h2 {
 }
 
 .ending {
-  margin: 50px 0;
+  width: 320px;
+  margin-top: 50px;
 }
 
 .ending a {
+  display: block;
+  float: left;
   font-size: 18px;
   font-weight: 600;
-  margin-right: 18px;
+  width: calc(100% * 0.25);
+}
+
+.github {
+  text-align: right;
 }
 
 @media only screen and (max-width: 850px) {
   .site {
+    width: 100%;
+  }
+
+  .me {
+    background-position: calc(100% - 0.5) -165px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .me {
     width: 100%;
   }
 }
@@ -112,11 +133,11 @@ h2 {
     width: 100%;
   }
 
-  .ending a {
-    margin-right: 60px;
+  .ending {
+    width: 100%;
   }
 
-  .github {
-    margin-right: 0px !important;
+  .instagram {
+    text-align: center;
   }
 }
