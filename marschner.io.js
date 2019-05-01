@@ -8,7 +8,6 @@ if (time >= 6 && time <= 19) {
   if (!$.getElementById(id)) {
     var head = $.getElementsByTagName('head')[0];
     var light = $.createElement('link');
-    var dark = $.getElementById('dark');
 
     light.id = id;
     light.rel = 'stylesheet';
@@ -17,6 +16,5 @@ if (time >= 6 && time <= 19) {
     light.media = 'all';
 
     head.appendChild(light);
-    head.removeChild(dark);
   }
 }

@@ -1,57 +1,13 @@
-* {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html, body {
-  height: 100%;
   background-color: #fff;
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  font-family: 'AG', -apple-system, BlinkMacSystemFont, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
   color: #242729;
 }
 
 a {
   color: #242729;
-  text-decoration: none;
-}
-
-p, span {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-ul, li {
-  list-style-type: none;
-}
-
-h1, h3 {
-  font-size: 22px;
-  line-height: 28px;
-  margin-top: 50px;
-}
-
-h2 {
-  font-size: 44px;
-  line-height: 50px;
-  margin-top: 50px;
-}
-
-.site {
-  width: 850px;
-  margin: auto;
-  align-content: center;
-}
-
-.content {
-  padding-bottom: 50px;
-  margin: auto 25px;
-  position: relative;
 }
 
 .indicator:before {
@@ -59,89 +15,7 @@ h2 {
 }
 
 .me {
-  width: 600px;
-  height: 200px;
-  margin-top: 25px;
   border: 3px solid #242729;
   background-image: url("me-color.jpg");
   background-position: 0px -65px;
-  background-repeat: no-repeat;
-  background-size: auto;
-}
-
-.experience {
-  display: block;
-  width: 320px;
-}
-
-.experience h3 {
-  margin-bottom: 15px;
-}
-
-.experience li {
-  margin-bottom: 25px;
-}
-
-.experience .time {
-  float: right !important;
-}
-
-.center {
-  text-align: center;
-}
-
-.image-container {
-  padding: 5px;
-}
-
-.image-container img {
-  height: 200px;
-  width: 200px;
-}
-
-.ending {
-  width: 320px;
-  margin-top: 50px;
-}
-
-.ending a {
-  display: block;
-  float: left;
-  font-size: 18px;
-  font-weight: 600;
-  width: calc(100% * 0.25);
-}
-
-.github {
-  text-align: right;
-}
-
-@media only screen and (max-width: 850px) {
-  .site {
-    width: 100%;
-  }
-
-  .me {
-    background-position: calc(100% - 0.5) -165px;
-  }
-}
-
-@media only screen and (max-width: 650px) {
-  .me {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .experience {
-    width: 100%;
-  }
-
-  .ending {
-    width: 100%;
-  }
-
-  .instagram {
-    text-align: center;
-  }
 }
