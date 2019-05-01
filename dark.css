@@ -107,6 +107,7 @@ h2 {
 
 .ending {
   margin-top: 50px;
+  padding-bottom: 25px;
 }
 
 .ending a {
@@ -114,7 +115,6 @@ h2 {
   float: left;
   font-size: 18px;
   font-weight: 600;
-  /* width: calc(100% * 0.25); */
   margin-right: 15px;
 }
 
@@ -149,5 +149,43 @@ h2 {
 
   .instagram {
     text-align: center;
+  }
+
+  .linkedin {
+    margin-right: 0px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .me {
+    background-position: calc(100% * 0.5 + -1px) -165px !important;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .ending a {
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .me {
+    background-position: calc(100% * 0.50 + -1px) -145px !important;
+  }
+
+  .experience .company, .experience .time {
+    width: calc(100% - 45px);
+    float: left !important;
+  }
+
+  .experience small {
+    font-size: 12px;
+    margin-left: 45px;
+  }
+
+  .ending a {
+    width: 45%;
+    text-align: left;
+    margin-bottom: 3px;
   }
 }

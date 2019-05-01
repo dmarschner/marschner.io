@@ -19,3 +19,15 @@ a {
   background-image: url("me-color.jpg");
   background-position: 0px -65px;
 }
+
+@media only screen and (max-width: 480px) {
+  .me {
+    background-position: calc(100% * 0.6 + -1px) -65px !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .me {
+    background-position: calc(100% * 0.57 + -1px) -65px !important;
+  }
+}
