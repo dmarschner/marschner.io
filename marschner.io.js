@@ -1,21 +1,22 @@
 var $ = document;
 var today = new Date();
 var time = today.getHours();
-var id = 'dark';
 
 if (time >= 6 && time <= 19) {
-  id = "light";
-}
+  var id = "light";
 
-if (!$.getElementById(id)) {
-  var head = $.getElementsByTagName('head')[0];
-  var link = $.createElement('link');
+  if (!$.getElementById(id)) {
+    var head = $.getElementsByTagName('head')[0];
+    var light = $.createElement('link');
+    var dark = $.getElementById('dark');
 
-  link.id = id;
-  link.rel = 'stylesheet';
-  link.type = 'text/css';
-  link.href = id + '.css';
-  link.media = 'all';
+    light.id = id;
+    light.rel = 'stylesheet';
+    light.type = 'text/css';
+    light.href = id + '.css?';
+    light.media = 'all';
 
-  head.appendChild(link);
+    head.appendChild(light);
+    head.removeChild(dark);
+  }
 }
