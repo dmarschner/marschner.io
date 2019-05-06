@@ -79,7 +79,7 @@ h3 {
 }
 
 .experience {
-  margin-top: 80px;
+  margin-top: 70px;
   width: 60%;
 }
 
@@ -115,8 +115,12 @@ h3 {
   width: 200px;
 }
 
+.contact {
+  line-height: 22px;
+}
+
 .ending {
-  margin-top: 80px;
+  margin-top: 70px;
   padding-bottom: 25px;
 }
 
