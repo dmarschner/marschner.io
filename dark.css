@@ -122,7 +122,8 @@ h3 {
 }
 
 .contact {
-  width: 370px;
+  width: 390px;
+  padding-right: 25px;
   line-height: 22px;
 }
 
@@ -171,11 +172,13 @@ h3 {
   }
 }
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 400px) {
   .contact {
     width: 100%;
+    padding-right: 0px !important;
   }
 
+@media only screen and (max-width: 370px) {
   .ending a {
     width: 45%;
     text-align: left;
