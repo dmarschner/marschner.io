@@ -17,17 +17,11 @@ a {
 .me {
   border: 3px solid #242729;
   background-image: url("me-color.jpg");
-  background-position: 0px -65px;
+  background-position: 0px 0px;
 }
 
 @media only screen and (max-width: 600px) {
   .me {
-    background-position: calc(100% * 0.6 + -1px) -65px !important;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .me {
-    background-position: calc(100% * 0.57 + -1px) -65px !important;
+    background-position: calc(100% * 0.5 + -1px) 0px !important;
   }
 }
