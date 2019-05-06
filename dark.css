@@ -21,8 +21,12 @@ a {
   text-decoration: none;
 }
 
+a.underline {
+  text-decoration: underline;
+}
+
 p, span {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -80,7 +84,7 @@ h3 {
 
 .experience {
   margin-top: 70px;
-  width: 60%;
+  width: 100%;
 }
 
 .experience h3 {
@@ -93,6 +97,7 @@ h3 {
 
 .experience .time {
   font-size: 14px;
+  font-style: italic;
 }
 
 .microsoft img, .wunderlist img, .freelance img {
@@ -116,6 +121,7 @@ h3 {
 }
 
 .contact {
+  width: 370px;
   line-height: 22px;
 }
 
@@ -127,7 +133,7 @@ h3 {
 .ending a {
   display: block;
   float: left;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   margin-right: 15px;
 }
@@ -146,15 +152,11 @@ h3 {
   }
 
   .me {
-    background-position: calc(100% * 0.5 + -1px) 0px !important;
+    background-position: calc(100% * 0.5) 0px !important;
   }
 }
 
 @media only screen and (max-width: 550px) {
-  .experience {
-    width: 100%;
-  }
-
   .ending {
     width: 100%;
   }
@@ -169,6 +171,14 @@ h3 {
 }
 
 @media only screen and (max-width: 370px) {
+  .experience {
+    width: 100%;
+  }
+
+  .contact {
+    width: 100%;
+  }
+
   .ending a {
     width: 45%;
     text-align: left;
@@ -183,12 +193,7 @@ h3 {
     line-height: 40px;
   }
 
-  .experience .company, .experience .time {
-    width: calc(100% - 45px);
-    float: left !important;
-  }
-
   .experience small {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
