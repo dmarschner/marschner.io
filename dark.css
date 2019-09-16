@@ -159,9 +159,6 @@ h3 {
 
   .me {
     width: 100%;
-  }
-
-  .me {
     background-position: calc(100% * 0.5) 0px !important;
   }
 }
