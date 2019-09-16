@@ -83,6 +83,12 @@ h3 {
   background-size: cover;
 }
 
+.hidden {
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+}
+
 .experience {
   margin-top: 70px;
   width: 100%;
