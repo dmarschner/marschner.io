@@ -73,6 +73,8 @@ h3 {
 }
 
 .me {
+  position: relative;
+  overflow: hidden;
   width: 600px;
   height: 400px;
   margin-top: 25px;
@@ -84,7 +86,8 @@ h3 {
 }
 
 .hidden {
-  visibility: hidden;
+  position: absolute;
+  top: -1px;
   width: 1px;
   height: 1px;
 }
