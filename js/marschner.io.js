@@ -12,7 +12,7 @@ if (time >= 6 && time <= 19) {
     light.id = id;
     light.rel = 'stylesheet';
     light.type = 'text/css';
-    light.href = '../css/' + id + '.css';
+    light.href = 'css/' + id + '.css';
     light.media = 'all';
 
     head.appendChild(light);
