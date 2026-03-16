@@ -1,86 +1,96 @@
+:root {
+  --bg: #1a1c1e;
+  --fg: #f0f0f0;
+  --fg-muted: #777;
+  --border: #2e3134;
+  --max-width: 660px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 96px;
+}
+
 * {
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html, body {
   height: 100%;
-  background-color: #242729;
+  background-color: var(--bg);
 }
 
 body {
   -webkit-font-smoothing: antialiased;
-  font-family: 'AG', -apple-system, BlinkMacSystemFont, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
-  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+  color: var(--fg);
+  line-height: 1.6;
 }
 
 a {
-  color: #fff;
+  color: var(--fg);
   text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+a:hover {
+  opacity: 0.6;
 }
 
 a.underline {
   text-decoration: underline;
-}
-
-p, span {
-  font-size: 14px;
-  font-weight: 600;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
 }
 
 ul, li {
   list-style-type: none;
 }
 
-h1 {
-  font-size: 25px;
-  line-height: 31px;
-  margin-top: 50px;
-}
-
-h2 {
-  font-size: 44px;
-  line-height: 50px;
-  margin-top: 50px;
-}
-
-h3 {
-  font-size: 18px;
-  font-weight: 600;
-}
+/* ─── Layout ─────────────────────────────────── */
 
 .site {
-  width: 650px;
+  width: var(--max-width);
   min-width: 320px;
   margin: auto;
-  align-content: center;
 }
 
 .content {
-  padding-bottom: 50px;
-  margin: auto 25px;
-  position: relative;
+  padding: var(--space-lg) var(--space-md) var(--space-lg);
+}
+
+/* ─── Header ─────────────────────────────────── */
+
+h1 {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
 }
 
 .indicator {
-  font-size: 22px;
+  font-size: 14px;
+  margin-right: 6px;
 }
 
 .indicator:before {
-  content: "🌑 ";
+  content: "🌑";
 }
+
+/* ─── Portrait ───────────────────────────────── */
 
 .me {
   position: relative;
   overflow: hidden;
-  width: 600px;
-  height: 400px;
-  margin-top: 25px;
-  border: 3px solid #fff;
+  width: 100%;
+  height: 380px;
+  margin-top: var(--space-md);
+  border: 1px solid var(--border);
   background-image: url("../images/me.png");
-  background-position: 0px 0px;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -92,121 +102,149 @@ h3 {
   height: 1px;
 }
 
-.experience {
-  margin-top: 70px;
-  width: 100%;
+/* ─── Bio ────────────────────────────────────── */
+
+.bio {
+  margin-top: var(--space-lg);
 }
 
-.experience h3 {
-  margin-bottom: 15px;
+.bio-item {
+  margin-bottom: var(--space-md);
+  display: flex;
+  flex-direction: column;
 }
 
-.experience li {
-  margin-bottom: 25px;
+.bio-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
-.experience .time {
+.bio-sub {
   font-size: 14px;
+  color: var(--fg-muted);
+  margin-top: 5px;
   font-style: italic;
 }
 
+/* ─── Experience ─────────────────────────────── */
+
+.experience {
+  margin-top: var(--space-xl);
+}
+
+.experience h3 {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: var(--space-md);
+}
+
+.experience ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.experience li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
 .logo {
-  float: left;
+  flex-shrink: 0;
+  width: 36px;
+  padding-top: 3px;
 }
 
 .logo img {
-  width: 35px;
-  margin: 2px 10px 15px 0;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
 }
 
 .border-radius-6 {
   border-radius: 6px;
 }
 
-.center {
-  text-align: center;
+.role {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
-.image-container {
-  padding: 5px;
+.role .company {
+  font-size: 15px;
+  font-weight: 600;
 }
 
-.image-container img {
-  height: 200px;
-  width: 200px;
+.role .title {
+  font-size: 13px;
+  color: var(--fg-muted);
 }
+
+.role .time {
+  font-size: 12px;
+  color: var(--fg-muted);
+  font-style: italic;
+}
+
+/* ─── Contact ────────────────────────────────── */
 
 .contact {
-  width: 390px;
-  padding-right: 25px;
-  line-height: 22px;
+  margin-top: var(--space-xl);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--fg-muted);
+  max-width: 420px;
 }
 
+.contact a {
+  color: var(--fg);
+}
+
+/* ─── Footer ─────────────────────────────────── */
+
 .ending {
-  margin-top: 70px;
-  padding-bottom: 25px;
+  margin-top: var(--space-lg);
+  display: flex;
+  gap: var(--space-sm);
 }
 
 .ending a {
-  display: block;
-  float: left;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
-  margin-right: 15px;
+  letter-spacing: 0.05em;
 }
 
-.linkedin {
-  text-align: right;
-}
+/* ─── Responsive ─────────────────────────────── */
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 700px) {
   .site {
     width: 100%;
   }
+}
+
+@media only screen and (max-width: 480px) {
+  .content {
+    padding: var(--space-md) var(--space-sm) var(--space-md);
+  }
+
+  .bio-title {
+    font-size: 26px;
+  }
 
   .me {
-    width: 100%;
-    background-position: calc(100% * 0.5) 0px !important;
+    height: 280px;
   }
 }
 
-@media only screen and (max-width: 550px) {
-  .ending {
-    width: 100%;
-  }
-
-  .instagram {
-    text-align: center;
-  }
-
-  .linkedin {
-    margin-right: 0px !important;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .contact {
-    width: 100%;
-    padding-right: 0px !important;
-  }
-}
-
-@media only screen and (max-width: 370px) {
-  .ending a {
-    width: 45%;
-    text-align: left;
-    margin-right: 10px;
-    margin-bottom: 3px;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  h2 {
-    font-size: 34px;
-    line-height: 40px;
-  }
-
-  .experience small {
-    font-size: 13px;
+@media only screen and (max-width: 360px) {
+  .bio-title {
+    font-size: 22px;
   }
 }

@@ -1,21 +1,27 @@
+:root {
+  --bg: #fafafa;
+  --fg: #1a1c1e;
+  --fg-muted: #666;
+  --border: #1a1c1e;
+}
+
 html, body {
-  background-color: #fff;
+  background-color: var(--bg);
 }
 
 body {
-  color: #242729;
+  color: var(--fg);
 }
 
 a {
-  color: #242729;
+  color: var(--fg);
 }
 
 .indicator:before {
-  content: "🔆 ";
+  content: "🔆";
 }
 
 .me {
-  border: 3px solid #242729;
   background-image: url("../images/me-color.png");
-  background-position: 0px 0px;
+  background-position: center top;
 }
